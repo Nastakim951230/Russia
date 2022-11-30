@@ -50,7 +50,15 @@ namespace Russia.Page
             {
                 TourList = TourList.Where(x => x.IsActual != false).ToList();
             }
-            // сортировка
+
+           if(Type.SelectedIndex >0)
+            {
+                
+                TourList =TourList.Where(x=>x.TypeOfTour.Any(y=>y.TypeId==Type.SelectedIndex)).ToList();
+            }
+
+
+            // сортировкаy
             switch (Sortirovka.SelectedIndex)
             {
                 case 0:
@@ -72,6 +80,7 @@ namespace Russia.Page
             if (TourList.Count == 0)
             {
                 MessageBox.Show("нет записей");
+                Search.Text = "";
             }
 
         }
@@ -82,7 +91,7 @@ namespace Russia.Page
 
         private void Type_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            Filter();
         }
 
         private void Sortirovka_SelectionChanged(object sender, SelectionChangedEventArgs e)
