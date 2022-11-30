@@ -1,0 +1,21 @@
+﻿<Application x:Class="Russia.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Russia"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="Comic Sans MS"/>
+            <Setter Property="FontSize" Value="16"/>
+        </Style>
+        <Style x:Key="FonStyleGrid" TargetType="Grid">
+            <Setter Property="Background" Value="#445C93"/>
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="Margin" Value="10,0,10,0"/>
+        </Style>
+        <Style TargetType="ComboBox">
+            <Setter Property="Margin" Value="10,0,10,0"/>
+        </Style>
+    </Application.Resources>
+</Application>
