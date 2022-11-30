@@ -64,12 +64,13 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Base.cs" />
     <Compile Include="BaseBD.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>BaseBD.tt</DependentUpon>
     </Compile>
-    <Compile Include="Class_Page\Base.cs" />
+    <Compile Include="ClassTour.cs" />
     <Compile Include="Country.cs">
       <DependentUpon>BaseBD.tt</DependentUpon>
     </Compile>
@@ -86,8 +87,8 @@
       <DependentUpon>BaseBD.tt</DependentUpon>
     </Compile>
     <Compile Include="NavigateFrame.cs" />
-    <Compile Include="Page\Tour.xaml.cs">
-      <DependentUpon>Tour.xaml</DependentUpon>
+    <Compile Include="Page\PageTour.xaml.cs">
+      <DependentUpon>PageTour.xaml</DependentUpon>
     </Compile>
     <Compile Include="Tour.cs">
       <DependentUpon>BaseBD.tt</DependentUpon>
@@ -120,7 +121,7 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Page\Tour.xaml">
+    <Page Include="Page\PageTour.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

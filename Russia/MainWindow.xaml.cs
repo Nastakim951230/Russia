@@ -23,8 +23,8 @@ namespace Russia
         public MainWindow()
         {
             InitializeComponent();
-            Class_Page.Base.BD = new Entities();
-            Glavnay.Navigate(new Tour());
+            Base.BD = new Entities();
+            Glavnay.Navigate(new Page.PageTour());
             NavigateFrame.perehod = Glavnay;
         }
     }

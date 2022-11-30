@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Russia.Class_Page
+namespace Russia
 {
     internal class Base
     {
