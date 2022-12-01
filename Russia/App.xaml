@@ -36,5 +36,9 @@
             <Setter Property="Margin" Value="10"/>
             <Setter Property="Background" Value="#445c93"/>
         </Style>
+        <Style x:Key="StyleButton" TargetType="Button">
+            <Setter Property="Background" Value="#fac716"/>
+            <Setter Property="Margin" Value="10,0,10,0"/>
+        </Style>
     </Application.Resources>
 </Application>

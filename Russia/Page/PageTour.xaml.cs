@@ -33,6 +33,13 @@ namespace Russia.Page
                 Type.Items.Add(type[i].Name);
             }
             Type.SelectedIndex = 0;
+            List<Tour> tour = Base.BD.Tour.ToList();
+            decimal a = 0;
+            foreach(Tour t in tour)
+            {
+                a = a + t.Price;
+            }
+            TBCoint.Text = "Общая стоимость туров: " + a;
         }
         void Filter()
         {
@@ -43,6 +50,24 @@ namespace Russia.Page
             if (!string.IsNullOrWhiteSpace(Search.Text))  // если строка не пустая и если она не состоит из пробелов
             {
                 TourList = TourList.Where(x => x.Name.ToLower().Contains(Search.Text.ToLower())).ToList();
+            }
+
+            if (!string.IsNullOrWhiteSpace(SearchOpisanie.Text))  // если строка не пустая и если она не состоит из пробелов
+            {
+                List<Tour> trl= TourList.Where(x => x.Description != null).ToList();
+                if (trl.Count > 0)
+                {
+                    foreach (Tour tr in trl)
+                    {
+                        TourList = TourList.Where(x => x.Description.ToLower().Contains(SearchOpisanie.Text.ToLower())).ToList();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("нет описания");
+                    SearchOpisanie.Text = "";
+                }
+               
             }
 
             // выбор элементов только с актуальностью
@@ -83,6 +108,13 @@ namespace Russia.Page
                 Search.Text = "";
             }
 
+            decimal b = 0;
+            foreach(Tour t in TourList)
+            {
+                b = b + t.Price;
+            }
+            TBCoint.Text = "Общая стоимость туров: " + b;
+
         }
         private void cbAktyal_Checked(object sender, RoutedEventArgs e)
         {
@@ -100,6 +132,16 @@ namespace Russia.Page
         }
 
         private void Search_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            Filter();
+        }
+
+        private void Otel_Click(object sender, RoutedEventArgs e)
+        {
+            NavigateFrame.perehod.Navigate(new Page.PageHotel());
+        }
+
+        private void SearchOpisanie_TextChanged(object sender, TextChangedEventArgs e)
         {
             Filter();
         }

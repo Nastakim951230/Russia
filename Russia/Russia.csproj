@@ -87,6 +87,9 @@
       <DependentUpon>BaseBD.tt</DependentUpon>
     </Compile>
     <Compile Include="NavigateFrame.cs" />
+    <Compile Include="Page\PageHotel.xaml.cs">
+      <DependentUpon>PageHotel.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Page\PageTour.xaml.cs">
       <DependentUpon>PageTour.xaml</DependentUpon>
     </Compile>
@@ -121,6 +124,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Page\PageHotel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Page\PageTour.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
