@@ -93,6 +93,7 @@
     <Compile Include="Page\PageTour.xaml.cs">
       <DependentUpon>PageTour.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Strelki.cs" />
     <Compile Include="Tour.cs">
       <DependentUpon>BaseBD.tt</DependentUpon>
     </Compile>
