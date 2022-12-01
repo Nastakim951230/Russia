@@ -96,7 +96,7 @@
             
         </Grid>
         <Grid Grid.Row="4">
-            <ListView Name="ListTour" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+            <ListView Name="ListTour" ScrollViewer.HorizontalScrollBarVisibility="Disabled" >
                 <ListView.ItemsPanel>
                     <ItemsPanelTemplate>
                         <WrapPanel HorizontalAlignment="Center">
