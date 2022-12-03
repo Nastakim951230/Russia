@@ -5,21 +5,21 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="f998a9828a064f3b8ad2147200726a2b" Name="Diagram1" ZoomLevel="64">
-        <EntityTypeShape EntityType="hotels23Model.Country" Width="1.5" PointX="0.75" PointY="4.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="hotels23Model.Hotel" Width="1.5" PointX="3" PointY="3.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="hotels23Model.HotelComment" Width="1.5" PointX="5.25" PointY="2.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="hotels23Model.HotelImage" Width="1.5" PointX="5.25" PointY="5.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="hotels23Model.HotelOfTour" Width="1.5" PointX="8.25" PointY="3.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="hotels23Model.Tour" Width="1.5" PointX="6" PointY="9.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="hotels23Model.Type" Width="1.5" PointX="6" PointY="14" IsExpanded="true" />
-        <EntityTypeShape EntityType="hotels23Model.TypeOfTour" Width="1.5" PointX="8.25" PointY="9.875" IsExpanded="true" />
-        <AssociationConnector Association="hotels23Model.FK_Hotel_Country" ManuallyRouted="false" />
-        <AssociationConnector Association="hotels23Model.FK_HotelComment_Hotel" ManuallyRouted="false" />
-        <AssociationConnector Association="hotels23Model.FK_HotelImage_Hotel" ManuallyRouted="false" />
-        <AssociationConnector Association="hotels23Model.FK_HotelOfTour_Hotel" ManuallyRouted="false" />
-        <AssociationConnector Association="hotels23Model.FK_HotelOfTour_Tour" ManuallyRouted="false" />
-        <AssociationConnector Association="hotels23Model.FK_TypeOfTour_Tour" ManuallyRouted="false" />
-        <AssociationConnector Association="hotels23Model.FK_TypeOfTour_Type" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="hotels23Model.Country" Width="1.5" PointX="0.75" PointY="4.125" />
+        <EntityTypeShape EntityType="hotels23Model.Hotel" Width="1.5" PointX="3" PointY="3.5" />
+        <EntityTypeShape EntityType="hotels23Model.HotelComment" Width="1.5" PointX="5.25" PointY="2.5" />
+        <EntityTypeShape EntityType="hotels23Model.HotelImage" Width="1.5" PointX="5.25" PointY="8.25" />
+        <EntityTypeShape EntityType="hotels23Model.HotelOfTour" Width="1.5" PointX="8.25" PointY="3.875" />
+        <EntityTypeShape EntityType="hotels23Model.Tour" Width="1.5" PointX="6" PointY="11.5" />
+        <EntityTypeShape EntityType="hotels23Model.Type" Width="1.5" PointX="6" PointY="16" />
+        <EntityTypeShape EntityType="hotels23Model.TypeOfTour" Width="1.5" PointX="8.25" PointY="11.875" />
+        <AssociationConnector Association="hotels23Model.FK_Hotel_Country" />
+        <AssociationConnector Association="hotels23Model.FK_HotelComment_Hotel" />
+        <AssociationConnector Association="hotels23Model.FK_HotelImage_Hotel" />
+        <AssociationConnector Association="hotels23Model.FK_HotelOfTour_Hotel" />
+        <AssociationConnector Association="hotels23Model.FK_HotelOfTour_Tour" />
+        <AssociationConnector Association="hotels23Model.FK_TypeOfTour_Tour" />
+        <AssociationConnector Association="hotels23Model.FK_TypeOfTour_Type" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

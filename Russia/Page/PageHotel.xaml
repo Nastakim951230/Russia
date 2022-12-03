@@ -43,6 +43,13 @@
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
+                        <GridViewColumn Header="Удалить">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Button Uid="{Binding Id}" Name="btnDelet" Content="Удалить" Click="btnDelet_Click"></Button>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
                     </GridView>
                 </ListView.View>
             </ListView>

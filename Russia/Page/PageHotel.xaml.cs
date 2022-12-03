@@ -130,5 +130,45 @@ namespace Russia.Page
             Hotel hotel = Base.BD.Hotel.FirstOrDefault(x => x.Id == index);
             NavigateFrame.perehod.Navigate(new Page.PageAdd_Edit_Hotel(hotel));
         }
+
+        private void btnDelet_Click(object sender, RoutedEventArgs e)
+        {
+            Button btn = (Button)sender;
+            int index = Convert.ToInt32(btn.Uid);
+            Hotel hotel = Base.BD.Hotel.FirstOrDefault(x => x.Id == index);
+           List<HotelOfTour> hotelOftour = Base.BD.HotelOfTour.Where(x => x.HotelId == hotel.Id).ToList();
+
+          if(hotelOftour.Count > 0)
+            {
+                int kolHO = hotelOftour.Count;
+                int kol = 0;
+                foreach(HotelOfTour hotelOfTour in hotelOftour)
+                {
+                    kol++;
+                    Tour hotelList = Base.BD.Tour.FirstOrDefault(x=>x.Id==hotelOfTour.TourId);
+                    if (hotelList.IsActual == true)
+                    {
+                        MessageBox.Show("Данный отель не может быть удален, так как находиться в списке актуальных для туров");
+                        break;
+                    }
+                    else
+                    {
+                        if (kol == kolHO)
+                        {
+                            Base.BD.Hotel.Remove(hotel);
+                            Base.BD.SaveChanges();
+                            NavigateFrame.perehod.Navigate(new Page.PageHotel());
+                        }
+                    }
+                }
+              
+            }
+            else
+            {
+                Base.BD.Hotel.Remove(hotel);
+                Base.BD.SaveChanges();
+                NavigateFrame.perehod.Navigate(new Page.PageHotel());
+            }
+        }
     }
 }
