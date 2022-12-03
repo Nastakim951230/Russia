@@ -34,7 +34,7 @@ namespace Russia.Page
 
         private void btnTour_Click(object sender, RoutedEventArgs e)
         {
-
+            NavigateFrame.perehod.Navigate(new Page.PageTour());
         }
 
         private void Kol_vo_Tour_Loaded(object sender, RoutedEventArgs e)
@@ -53,11 +53,7 @@ namespace Russia.Page
             }
         }
 
-        private void btnRedactirovanie_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
+       
         private void GoPage_MouseDown(object sender, MouseButtonEventArgs e)
         {
             TextBlock tb = (TextBlock)sender;
@@ -119,6 +115,20 @@ namespace Russia.Page
             sp.Countlist = HotelFilter.Count;  // присваиваем новое значение свойству, которое в объекте отвечает за общее количество записей
             TableHotel.ItemsSource = HotelFilter.Skip(0).Take(sp.CountPage).ToList();  // отображаем первые записи в том количестве, которое равно CountPage
             sp.CurrentPage = 1; // текущая страница - это страница 1
+        }
+
+        private void btnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            NavigateFrame.perehod.Navigate(new Page.PageAdd_Edit_Hotel());
+        }
+
+        private void btnRedactirovanie_Click(object sender, RoutedEventArgs e)
+        {
+
+            Button btn = (Button)sender;  
+            int index = Convert.ToInt32(btn.Uid);   
+            Hotel hotel = Base.BD.Hotel.FirstOrDefault(x => x.Id == index);
+            NavigateFrame.perehod.Navigate(new Page.PageAdd_Edit_Hotel(hotel));
         }
     }
 }

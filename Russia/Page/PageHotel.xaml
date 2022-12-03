@@ -18,6 +18,7 @@
         <Grid Grid.Row="0">
             <StackPanel Orientation="Horizontal">
                 <Button Name="btnTour" Click="btnTour_Click" Style="{StaticResource StyleButton}">Туры</Button>
+                <Button Name="btnAdd" Click="btnAdd_Click" Style="{StaticResource StyleButton}">Добавить отел</Button>
             </StackPanel>
         </Grid>
         <Grid Grid.Row="1">
