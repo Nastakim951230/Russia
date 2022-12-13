@@ -25,11 +25,15 @@ namespace Russia.Page
         public PageHotel()
         {
             InitializeComponent();
-            TableHotel.ItemsSource = Base.BD.Hotel.ToList();
+           
             HotelFilter = Base.BD.Hotel.ToList();
-            sp.CountPage = Base.BD.Hotel.ToList().Count();
-
+            sp.CountPage = 10;
+            sp.Countlist = HotelFilter.Count;
+            TableHotel.ItemsSource = HotelFilter.Skip(0).Take(sp.CountPage).ToList();
             DataContext = sp;
+
+
+           
         }
 
         private void btnTour_Click(object sender, RoutedEventArgs e)
